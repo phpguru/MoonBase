@@ -1,0 +1,63 @@
+
+/* Table of Content
+======================================================
+
+	:: Global styles
+	:: Page styles
+	:: Media queries
+		:: Site and Page styles
+	:: Font-face 									*/
+
+
+/* #Global Styles
+==================================================	*/
+
+    /* Demo - please delete */
+    .green { color: green; }
+    .red { color: red; }
+    .black { color: white; background: black; }
+    .panel { background: #f5f5f5; padding: 15px; }
+
+    /* header */
+        
+    /* footer */
+
+
+/* #Page Styles
+==================================================	*/
+
+    /* homepage */
+    
+    /* about page */
+
+
+/* #Media Queries
+==================================================	*/
+
+    /* Under 1200px */
+    @media (max-width: 1200px) { }
+        
+    /* Under 980px */
+    @media only screen and (max-width: 980px) { }
+
+    /* Under 820px */
+    @media only screen and (max-width: 820px) { }
+
+    /* Under 620px */
+    @media only screen and (max-width: 620px) { }
+
+    /* Under 500px */
+    @media only screen and (max-width: 500px) {	}
+
+    /* Under 340px */
+    @media only screen and (max-width: 340px) { }
+
+    /* Mobile calls */
+    @media only screen and (max-width: 820px) { }
+
+    /* High pixel displays */
+    @media (-webkit-min-device-pixel-ratio: 2) { }	
+	
+
+/* #Font-Face
+================================================== */

@@ -1,0 +1,251 @@
+
+/* Table of Contents
+==================================================
+
+	:: Grid
+	:: Spider
+	:: Media quires
+	:: Clearing										*/
+
+
+ /*	--------------------------------------------------
+    :: Grid
+--------------------------------------------------- */
+
+	.container {
+        position: relative;
+		margin: 0 auto;
+        max-width: 1020px;
+        /*	Use any of the following:
+            max-width: XXXXpx;	for a responsive layout
+            width: XXXXpx;		for a fixed layout - also use the same width for min-width on body i.e. body { min-width: XXXXpx; }
+            width: 100%;		for a fluid layout
+        */
+		min-width: 220px; }
+	
+	.row {
+		margin-bottom: 1.25em;
+		width: 100%; }
+	
+	.column, .columns {
+		display: inline;
+		float: left;
+		min-height: 1px;
+		position: relative; }
+				
+    /* Column side margins */
+	.one.column, .two.columns, .three.columns, .four.columns, .five.columns, .six.columns, .seven.columns, .eight.columns, .nine.columns, .ten.columns, .eleven.columns, .twelve.columns, .one-third.column, .two-thirds.column { margin: 0 .98039215686275%; }
+	
+    /* Nested Column Classes */
+    .columns.alpha, .column.alpha		{ margin-left: 0; }
+    .columns.omega, .column.omega		{ margin-right: 0; }
+	
+    /* Base Grid w/ IE7 hacks */
+    .row .one.column									{ width: 6.37254901960784%; *width: 6%;		/*   65 / 1020  */ }
+    .row .two.columns								{ width: 14.70588235294118%; *width: 14.5%;	/*  150 / 1020  */ }
+    .row .three.columns								{ width: 23.03921568627451%; *width: 22.5%;	/*  235 / 1020  */ }
+    .row .four.columns, .row .one-third.column	        { width: 31.37254901960784%; *width: 31%;	/*  320 / 1020  */ }
+    .row .five.columns								{ width: 40.19607843137255%; *width: 40%;	/*  410 / 1020  */ }
+    .row .six.columns								{ width: 48.03921568627451%; *width: 47.5%;	/*  490 / 1020  */ }
+    .row .seven.columns								{ width: 55.88235294117647%; *width: 55.5%;	/*  570 / 1020  */ }
+    .row .eight.columns, .row .two-thirds.column 	        { width: 64.70588235294118%; *width: 64.5%;	/*  660 / 1020  */ }
+    .row .nine.columns								{ width: 73.03921568627451%; *width: 72.5%;	/*  745 / 1020  */ }
+    .row .ten.columns								{ width: 81.37254901960784%; *width: 81%;	/*  830 / 1020  */ }
+    .row .eleven.columns								{ width: 89.70588235294118%; *width: 89.5%;	/*  915 / 1020  */ }
+    .row .twelve.columns								{ width: 98.03921568627451%; *width: 97.5%;	/* 1000 / 1020  */ }
+
+    /* Offsets w/ IE7 hacks */
+    .row .offset-by-one			{ margin-left: 8.43137254901961%; *margin-left: 8%;		    /*   86 / 1020  */ }
+    .row .offset-by-two			{ margin-left: 16.66666666666667%; *margin-left: 16%;		/*  170 / 1020  */ }
+    .row .offset-by-three		{ margin-left: 25%; *margin-left: 24.5%;					/*  255 / 1020  */ }
+    .row .offset-by-four			{ margin-left: 33.43137254901961%; *margin-left: 33%;		/*  341 / 1020  */ }
+    .row .offset-by-five			{ margin-left: 42.15686274509804%; *margin-left: 42%;		/*  430 / 1020  */ }
+    .row .offset-by-six			{ margin-left: 50%; *margin-left: 49.5%;					/*  510 / 1020  */ }
+    .row .offset-by-seven		{ margin-left: 57.84313725490196%; *margin-left: 57.5%;	    /*  590 / 1020  */ }
+    .row .offset-by-eight		{ margin-left: 66.66666666666667%; *margin-left: 66.5%;	    /*  680 / 1020  */ }
+    .row .offset-by-nine			{ margin-left: 75%; *margin-left: 74.5%;					/*  765 / 1020  */ }
+    .row .offset-by-ten			{ margin-left: 83.33333333333333%; *margin-left: 83%;		/*  850 / 1020  */ }
+    .row .offset-by-eleven		{ margin-left: 91.66666666666667%; *margin-left: 91%;		/*  935 / 1020  */ }
+    
+    
+ /*	-------------------------------------------------------------
+    :: Spider - Helps align your page elements for all quires
+----------------------------------------------------------------- */
+
+    /* Paste the following in your markup:
+    
+        <div class="spider">
+            <div class="spider_1200 text_center">1200</div>
+            <div class="spider_960 text_center">960</div>
+            <div class="spider_800 text_center">800</div>
+            <div class="spider_600 text_center">600</div>
+            <div class="spider_480 text_center">480</div>
+            <div class="spider_320 text_center">320</div>
+        </div>
+    
+    */
+    
+    .spider {
+        position: fixed;
+        z-index: 99999;
+        left: 50%;
+        top: 0;
+        margin-left: -600px; }
+    
+    .spider_1200 { width: 1198px; }
+    .spider_960 { width: 958px; }
+    .spider_800 { width: 798px; }
+    .spider_600 { width: 598px; }
+    .spider_480 { width: 478px; }
+    .spider_320 { width: 318px; }
+    
+    .spider_1200, .spider_960, .spider_800, .spider_600, .spider_480, .spider_320 {
+        border: 1px solid rgba(0,0,0,.3);
+        margin: 0 auto 20px;
+        height: 50px; }
+	
+    
+
+ /*	--------------------------------------------------
+    :: Media quires
+--------------------------------------------------- */
+    
+    /* Under 820px, simplify columns */
+    @media only screen and (max-width: 820px) {
+
+        .one.column, .two.columns, .three.columns, .four.columns, .five.columns, .six.columns, .seven.columns, .eight.columns, .nine.columns, .ten.columns, .eleven.columns, .twelve.columns, .one-third.column, .two-thirds.column { margin: 0 1.25%; }
+        
+        .row .one.column,
+        .row .two.columns  { width: 14%; /*  112 / 800  originally .two.columns */ }
+        
+        .row .three.columns { width: 22.3%; /*  114 / 800  */ }
+
+        .row .four.columns,
+        .row .one-third.column { width: 30.5%; /*  244 / 800  originally .three.columns */ }
+        
+        .row .five.columns,
+        .row .six.columns,
+        .row .seven.columns { width: 47%; /*  376 / 800  originally .six.columns */ }
+        
+        .row .eight.columns,
+        .row .nine.columns,
+        .row .two-thirds.column { width: 63.5%; /*  508 / 800  originally .eight.columns */ }
+        
+        .row .ten.columns,
+        .row .eleven.columns { width: 80%; /*  640 / 800  originally .ten.columns */ }
+        
+        .row .twelve.columns { width: 96.5%; /* 772 / 800  */ }
+
+        
+        /* offsets */
+        .row .offset-by-one { margin-left: 10%; /*  80 / 800  */ }
+        
+        .row .offset-by-two { margin-left: 17.8%; /*  146 / 800  */ }
+                
+        .row .offset-by-three,
+        .row .offset-by-four { margin-left: 34.25%; /*  271 / 800  */ }
+        
+        .row .offset-by-five,
+        .row .offset-by-six,
+        .row .offset-by-seven { margin-left: 50.75%; /*  405 / 800  */ }
+        
+        .row .offset-by-eight,
+        .row .offset-by-nine { margin-left: 67.25%; /*  537 / 800  */ }
+        
+        .row .offset-by-ten,        
+        .row .offset-by-eleven { margin-left: 83.75%; /*  670 / 800  */ }
+
+    }
+
+    /* Under 620px, stack columns */
+    @media only screen and (max-width: 620px) {
+
+        .columns, .column	{ margin: 0; }
+
+        .row .one.column,
+        .row .two.columns,
+        .row .three.columns,
+        .row .four.columns,
+        .row .five.columns,
+        .row .six.columns,
+        .row .seven.columns,
+        .row .eight.columns,
+        .row .nine.columns,
+        .row .ten.columns,
+        .row .eleven.columns,
+        .row .twelve.columns,
+        .row .one-third.column,
+        .row .two-thirds.column  { width: 90%; margin: 0 5%; }
+
+        .row .offset-by-one,
+        .row .offset-by-two,
+        .row .offset-by-three,
+        .row .offset-by-four,
+        .row .offset-by-five,
+        .row .offset-by-six,
+        .row .offset-by-seven,
+        .row .offset-by-eight,
+        .row .offset-by-nine,
+        .row .offset-by-ten,
+        .row .offset-by-eleven { margin-left: 0; }
+            
+    }
+    
+    /* Mobile only  */
+    @media only screen and (max-width: 820px) {
+
+        .mobile_left		{ float: left; }
+        .mobile_center		{ display: block; margin: 0 auto; }
+        .mobile_right		{ float: right; }
+        
+        .mobile_text_left 		{ text-align: left; }
+        .mobile_text_center		{ text-align: center; }
+        .mobile_text_right		{ text-align: right; }
+        
+        .mobile_hide		{ display: none !important; }
+        .mobile_show		{ display: block !important; }
+        
+        .mobile_remove_bottom	{ margin-bottom: 0 !important; }
+        .mobile_half_bottom	        { margin-bottom: .625em !important; }
+        .mobile_add_bottom		{ margin-bottom: 1.25em !important; }
+                
+    }
+
+
+	
+	
+/*	--------------------------------------------------
+    :: Clearing
+--------------------------------------------------- */
+
+	/* Self clearing */
+	.container:after {
+		content: "\0020";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden; }
+
+	/* Use clearfix class on parent to clear nested columns, or wrap each row of columns in a <div class="row"> */
+	.clearfix:before, .clearfix:after, .row:before, .row:after {
+		content: '\0020';
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		width: 0;
+		height: 0; }
+		
+    .row:after, .clearfix:after {
+		clear: both; }
+		
+    .row, .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear"> to clear columns */
+	.clear {
+		clear: both;
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		width: 0;
+		height: 0; }
